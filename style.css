@@ -1,0 +1,135 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body {
+   height: 100%;
+}
+body {
+   line-height: 1.6;
+   -webkit-font-smoothing: antialiased;
+   font-family: 'Outfit', sans-serif;
+   font-size: 18px;
+   background-color: hsl(217, 54%, 11%);
+}
+img, picture, video, canvas, svg {
+   display: block;
+   max-width: 100%;
+}
+
+/* OWN SELF'S CUSTOM CSS */
+.body-wrapper{ /* new div to be created */
+   min-height: 100%;
+}
+
+/* TEMPLATES - Typography - MOBILE */
+:root{
+    --fs-title: 1.5rem;            
+    --fs-price: 1rem;     
+    --fs-paragraphs: 1rem;     
+}
+
+/* START */
+.body-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card{
+    background-color: hsl(216, 50%, 16%);
+    border-radius: 10px;
+    border: hsl(215, 32%, 27%);
+    width: 85%;
+    height: 85%;
+    padding: 20px;
+
+    max-width: 320px;
+}
+.image-holder{
+    position: relative;
+}
+.cover{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cover:hover{
+    background-color: hsla(178, 100%, 50%, 0.342);
+}
+.cover:hover > .cover_icon{
+    opacity: 100;
+}
+.cover_icon{
+    width: 20%;
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+.main_img{
+    border-radius: 10px;
+}
+.title{
+    font-size: var(--fs-title);
+    color: white;
+    font-weight: 600;
+    padding: 20px 0 10px 0;
+    cursor: pointer;
+}
+.title:hover{
+    color: hsl(178, 100%, 50%);;
+}
+.sub-title{
+    font-size: var(--fs-paragraphs);
+    color: hsl(215, 51%, 70%);
+    margin: 0 0 15px 0;
+}
+.price{
+    color: hsl(178, 100%, 50%);
+    font-weight: 600;
+}
+.price img, .time img{
+    margin-right: 7px;
+    height: 65%;
+}
+.line{
+    border: .5px solid grey;
+    margin-bottom: 15px;
+}
+.artist{
+    margin-bottom: 5px;
+}
+.artist img{
+    border: 1px solid white;
+    border-radius: 70px;
+    width: 40px;
+    margin-right: 20px;
+}
+.name{
+    cursor: pointer;
+    color: white;
+}
+.name:hover{
+    color: hsl(178, 100%, 50%);;
+}
+
+
+
+.flex, .price, .time{
+    display: flex;
+    align-items: center;
+}
+.space-between{
+    justify-content: space-between;
+}
